@@ -9,3 +9,6 @@ Each task has an ID (generated automatically by MongoDB), a description (string 
 - PUT /api/todos/{id} - update an existing task by its ID
 - DELETE /api/todos/{id} - delete a task by its ID
 - GET /api/todos/search?description - search for tasks by their description, with optional query parameters for pagination and sorting
+
+The API template implemented in this project is a creation of [Gerardo Lima](https://github.com/gerardolima).  
+You can explore it [here](https://github.com/gerardolima/edit-2023-jan)

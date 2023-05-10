@@ -42,7 +42,7 @@ const postMovie = Object.freeze<ServerRoute>({
   },
   handler: async (req: Request<{Payload: Movie}>, h) => {
     // get data from request
-    const mongo = req.mongo
+    const {mongo} = req
     const movie = req.payload
 
     // call handler (request-agnostic)
@@ -122,7 +122,7 @@ const getSearch = Object.freeze<ServerRoute>({
   handler: async (req, _h) => {
     // get data from request
     const {mongo} = req
-    const term = req.query.term
+    const {term} = req.query
 
     // call handler (request-agnostic)
     return search(mongo, term)

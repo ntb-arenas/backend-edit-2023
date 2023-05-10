@@ -11,7 +11,7 @@ import health from './routes/health'
 import validated from './routes/validated'
 import authBasic from './routes/routes-basic'
 import authFoo from './routes/routes-foo'
-import todos from "./routes/todos";
+import todos from './routes/todos'
 
 /**
  * Initializes the server (starts the caches, finalizes plugin registration) but does not start
@@ -39,7 +39,7 @@ export default async (options?: Hapi.ServerOptions): Promise<Readonly<Hapi.Serve
     server.register(validated, {routes: {prefix: '/api/validated'}}),
     server.register(authBasic, {routes: {prefix: '/api/route-basic'}}),
     server.register(authFoo, {routes: {prefix: '/api/route-foo'}}),
-    server.register(todos, { routes: { prefix: "/api/todos" } }),
+    server.register(todos, {routes: {prefix: '/api/todos'}}),
   ])
 
   await server.initialize()
